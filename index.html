@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <title>Product van het Koopproces</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.js" rel="stylesheet">
+</head>
+<body>
+<nav class="light-blue lighten-1" role="navigation">
+  <div class="container">
+    <div class="nav-wrapper">
+        <a href="index.html" class="brand-logo center">Winkelstraat</a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+                <li><a href="#">Hardware</a></li>
+                <li><a href="#">PC</a></li>
+                <li><a href="#">Notebook & Tablet</a></li>
+                <li class="active"><a href="#">Processoren</a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+                <li><a href="#">Hardware</a></li>
+                <li><a href="#">PC</a></li>
+                <li><a href="#">Notebook & Tablet</a></li>
+                <li class="active"><a href="#">Processoren</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="hideBovenSectie">
+<div id="hideContainer" class="container">
+    <div class="section">
+        <div class="row">
+          <div class="card">
+              <div class="card-content">
+                  <p>Gratis verzending vanaf € 350,- <br> Verzendkosten zijn: € 5.95</p>
+              </div>
+          </div>
+            <div class="col s12 m8">
+                <div class="card">
+                    <div class="card-content">
+                        <p>Intel Core i7 6700k</p></b>
+                    </div>
+                </div>
+                <img src="img/i71eFoto.png" style="width:304px;height:428px;">
+
+               <div class="row">
+                   <div class="col s12 m8">
+                       <p><b>€ 342.50,-</b></p>
+                       <button onclick="addPriceInteli7()" class="btn waves-effect waves-light blue ">Bestel nu!
+                           <i class="material-icons right">send</i>
+                       </button>
+                 </div>
+              </div>
+            </div>
+
+            <div class="col s12 m4">
+                  <h5>Specificaties:</h5>
+                <ul class="collection">
+                    <li class="collection-item">Socket: 1151</li>
+                    <li class="collection-item">Aantal cores: 4</li>
+                    <li class="collection-item">Klokfrequentie: 4GHz</li>
+                    <li class="collection-item">Maximale turboklokfrequentie: 4.2GHz</li>
+                    <li class="collection-item">Maximum geheugengrootte: 64GB</li>
+                    <li class="collection-item">Procestechnologie: 14nm</li>
+                    <li class="collection-item">Thermal Design Power: 91W</li>
+                </ul>
+
+                <h5>Winkelmandje</h5>
+                <ul id="showCollection" class="collection">
+                    <li id="totaalPrijs" class="collection-item">
+                            De totaalprijs is: € 0.00
+                    </li>
+
+                    <li id="verzendKosten" class="collection-item">
+                            De verzendkosten zijn: € 5.95
+                    </li>
+                </ul>
+
+                <h5>Bestelde producten:</h5>
+                <ul class="collection">
+
+                    <li id="niksBesteld" class="collection-item">
+                            U heeft nog geen product aangeklikt!
+                    </li>
+
+                    <li id="besteldeProductenI7" class="collection-item">
+                            U heeft nog geen product aangeklikt!
+                    </li>
+
+                    <li id="besteldeProductenKoelpasta" class="collection-item">
+                            U heeft nog geen product aangeklikt!
+                    </li>
+
+                    <li id="besteldeProductenDVI" class="collection-item">
+                            U heeft nog geen product aangeklikt!
+                    </li>
+
+                    <li id="besteldeProductenHyper" class="collection-item">
+                            U heeft nog geen product aangeklikt!
+                    </li>
+                </ul>
+
+                <button onclick="checkTotaalPrijsIsNul()" class="btn waves-effect waves-light blue ">Afrekenen!
+                    <i class="material-icons right">send</i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+     <h5>Aanbevolen producten:</h5>
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img src="img/1efotoKoelpasta.jpg">
+              <span class="card-title">CPU Koelpasta - Zilver</span>
+              <a onclick="addPriceKoelPasta()" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+            </div>
+            <div class="card-content">
+
+              <p>Konig CPU Cooling Paste <br> <br>
+
+                <b>€ 4.49,-</b>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img src="img/2efotoDvi.jpg">
+              <span class="card-title">DVI 24+1 Male naar Female</span>
+              <a onclick="addPriceDVI()" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+            </div>
+            <div class="card-content">
+              <p>Deze adapter van Ninzer werkt zeer eenvoudig en is geschikt om video signalen van een DVI aansluiting met 24+1 pins om te zetten naar HDMI signalen. De adapter is Plug & Play en kan direct een HDMI kabel op aangesloten worden.</p>
+              <br> <b>€ 6.49,-</b>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img src="img/3efotoCooler.jpg">
+              <span class="card-title">Hyper 212 Evo CPU Cooler</span>
+              <a onclick="addPriceHyper212()" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+            </div>
+            <div class="card-content">
+              <p>Universal Tower cooler 4 CDC heatpipes 120mm 600-1600 RPM PWM fan - CPU-koeler
+              <br> <br>
+              <b>€ 25.80,-</b>
+            </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+ </div>
+</div>
+        <div class="hideAfrekenen">
+        <div class="row">
+            <div class="col s12 m4">
+                <br>
+                <button onclick="gaTerug()" class="btn waves-effect waves-light blue" type="submit" name="action">Ga terug!
+                    <i class="material-icons right">send</i>
+                </button>
+                <h5>Winkelmandje:</h5>
+                <ul id="showCollection2" class="collection">
+                    <li id="totaalPrijs2" class="collection-item">
+                        De totaalprijs is: € 0.00
+                    </li>
+
+                    <li id="verzendKosten2" class="collection-item">
+                        De verzendkosten zijn: € 5.95
+                    </li>
+                </ul>
+
+                <h5>Bestelde producten:</h5>
+                <ul class="collection">
+
+                    <li id="niksBesteld2" class="collection-item">
+                        U heeft nog geen product aangeklikt!
+                    </li>
+
+                    <li id="besteldeProductenI72" class="collection-item">
+                        U heeft nog geen product aangeklikt!
+                    </li>
+
+                    <li id="besteldeProductenKoelpasta2" class="collection-item">
+                        U heeft nog geen product aangeklikt!
+                    </li>
+
+                    <li id="besteldeProductenDVI2" class="collection-item">
+                        U heeft nog geen product aangeklikt!
+                    </li>
+
+                    <li id="besteldeProductenHyper2" class="collection-item">
+                        U heeft nog geen product aangeklikt!
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input placeholder="Jan" id="Voornaam" type="text" class="validate">
+                        <label for="Voornaam">Voornaam</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input placeholder="Piet" id="Achternaam" type="text" class="validate">
+                        <label for="Achternaam">Achternaam</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input placeholder="123@hotmail.com" id="email" type="email" class="validate">
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input placeholder="06123456789" id="telefoonn" type="number" class="validate">
+                        <label for="telefoonn">Telefoonnummer</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input placeholder="1234 AB" id="postcode" type="text" class="validate">
+                        <label for="postcode">Postcode</label>
+                    </div>
+                </div>
+
+                <div class="input-field col s12">
+                    <select>
+                        <option value="" disabled selected>Kies uw bank</option>
+                        <option value="1">ABN Amro</option>
+                        <option value="2">ING</option>
+                        <option value="3">Rabobank</option>
+                    </select>
+                    <label>Kies hier uw bank!</label>
+
+                    <button formaction="bedankt.html" class="btn waves-effect waves-light blue" name="action">Bestel!
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+            </form>
+          </div>
+        </div>
+    </div>
+</div>
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+  <script src="js/back.js"></script>
+  <script src="js/materialize.js"></script>
+</body>
+</html>
